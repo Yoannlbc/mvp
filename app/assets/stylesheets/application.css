@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+@import "components/_homepage.scss";
+@import "components/_basketball.scss";
+@import "components/_question_page.scss";
+@import "components/_result.scss";
+
+#score-display {
+  font-family: 'DS-Digital', monospace;
+  font-size: 2rem;
+  color: #FF0A0A !important;
+}
+
+#countdown-timer {
+  font-family: 'DS-Digital', monospace;
+  font-size: 2rem;
+  color: #F89060 !important;
+}

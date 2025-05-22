@@ -1,0 +1,15 @@
+<div class="feedback <%= is_correct ? 'success' : 'error' %>">
+  <h3><%= is_correct ? "Bonne réponse !" : "Mauvaise réponse..." %></h3>
+
+  <% unless is_correct %>
+    <p>La bonne réponse était : <%= correct_answer.content %></p>
+  <% end %>
+
+  <p>Score actuel : <%= score %></p>
+
+  <% if next_question_id %>
+    <%= link_to "Question suivante", quiz_question_path(next_question_id), class: "next-button", data: { turbo: false } %>
+  <% else %>
+    <%= link_to "Voir le résultat", quiz_result_path, class: "next-button", data: { turbo: false } %>
+  <% end %>
+</div>

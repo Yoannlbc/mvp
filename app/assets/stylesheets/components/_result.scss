@@ -1,0 +1,71 @@
+.result-container {
+  position: absolute;
+  top: 74%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  padding-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 0;
+}
+
+.result-container h2 {
+  font-size: 1.8rem;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  margin-top:55px;
+}
+
+.next-button {
+  font-family: "Inter", sans-serif;
+  width:180px;
+  margin-top: 20px;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  background-color: #ff6600;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.final-score{
+  font-family: "Inter", sans-serif;
+  color:black;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.result-page {
+  background-image: url("parquet-3.png");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.trophee-image {
+  position: absolute;
+  z-index: 1;
+  width: 450px;
+  top: 58%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+}

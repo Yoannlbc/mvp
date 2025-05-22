@@ -1,0 +1,10 @@
+<turbo-stream target="quiz_frame" action="update">
+  <template>
+    <%= render partial: "feedback", formats: [:html], locals: {
+      is_correct: @is_correct,
+      correct_answer: @correct_answer,
+      score: @score,
+      next_question_id: @next_question_id
+    } %>
+  </template>
+</turbo-stream>

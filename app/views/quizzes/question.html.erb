@@ -1,0 +1,34 @@
+<div class="quizz-background">
+  <%= image_tag "basketball-court.jpg", class: "basketball-court" %>
+  <%= image_tag "basketball-hoop.png", class: "basketball-hoop" %>
+
+  <div class="questions-container">
+    <h4 class="question"><%= @question.content %></h4>
+
+    <div id="quiz_frame_wrapper">
+      <turbo-frame id="quiz_frame">
+        <div class="answers">
+          <% @answers.each do |answer| %>
+            <%= form_with url: submit_answer_path, method: :post, data: { turbo_frame: "quiz_frame" } do %>
+              <%= hidden_field_tag :answer_id, answer.id %>
+              <%= hidden_field_tag :question_id, @question.id %>
+              <button type="submit" class="basketball-button" data-correct="<%= answer.correct? %>">
+                <div class="button-content">
+                  <%= image_tag("basketball.png", class: "basketball-image") %>
+                  <span class="answer-text"><%= answer.content %></span>
+                </div>
+              </button>
+            <% end %>
+          <% end %>
+        </div>
+      </turbo-frame>
+    </div>
+</div>
+<div id="scoreboard-container">
+  <%= image_tag("scoreboard_design.svg", class: "scoreboard") %>
+  <span id="countdown-timer">10</span>
+  <span id="score-display"><%= session[:score] || 0 %></span>
+  
+</div>
+</div>
+</div>

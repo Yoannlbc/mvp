@@ -1,0 +1,7 @@
+  <div class="result-page">
+    <%= image_tag "mvp-trophee-3.png", class: "trophee-image" %>
+  <div class="result-container">
+  <h3 class="final-score">Ton score : <strong><%= @score %></strong> sur <%= @total_questions %> questions</p>
+  <%= link_to "Recommencer", start_quiz_path, class: "next-button" %>
+</div>
+</div>
