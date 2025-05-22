@@ -13,10 +13,10 @@
  *= require_tree .
  *= require_self
  */
-@import "components/_homepage.scss";
-@import "components/_basketball.scss";
-@import "components/_question_page.scss";
-@import "components/_result.scss";
+@import "components/homepage";
+@import "components/basketball";
+@import "components/question_page";
+@import "components/result";
 
 #score-display {
   font-family: 'DS-Digital', monospace;
